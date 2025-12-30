@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:facebook/app_widgets.dart';
 import 'package:facebook/data/login_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';

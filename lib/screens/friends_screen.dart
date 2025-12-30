@@ -7,22 +7,16 @@ class FriendsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppNavbar(
-        title: "Friends",
-        onBackPressed: () => context.go("/home"),
-      ),
-      body: ListView.builder(
-        itemCount: 10, // Dummy friends
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: ProfileAvatar(radius: 25),
-            title: Text("Friend ${index + 1}"),
-            subtitle: const Text("Online"),
-            onTap: () => context.go("/profile"),
-          );
-        },
-      ),
+    return ListView.builder(
+      itemCount: 10, // Dummy friends
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: ProfileAvatar(radius: 25),
+          title: Text("Friend ${index + 1}"),
+          subtitle: const Text("Online"),
+          onTap: () => context.go("/profile"),
+        );
+      },
     );
   }
 }
